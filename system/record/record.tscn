@@ -38,3 +38,10 @@ size_flags_horizontal = 10
 text = "-+$???"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+title = "Add new record."
+initial_position = 1
+size = Vector2i(200, 200)
+visible = true
+always_on_top = true
