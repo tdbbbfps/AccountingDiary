@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dju2jij8gcyc1"]
+
+[ext_resource type="Script" uid="uid://b7tl1gx3iofgr" path="res://system/record/record.gd" id="1_g2km0"]
+[ext_resource type="Texture2D" uid="uid://b1uxlqmolm7kf" path="res://assets/imgs/ui/AddButton.png" id="2_vtdq8"]
+
+[node name="Record" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g2km0")
+money = -50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="RecordIcon" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_vtdq8")
+stretch_mode = 5
+
+[node name="RecordDescription" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Record"
+
+[node name="RecordMoney" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "-+$???"
+horizontal_alignment = 2
+vertical_alignment = 1

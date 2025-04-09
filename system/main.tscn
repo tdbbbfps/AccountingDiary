@@ -1,11 +1,53 @@
-[gd_scene format=3 uid="uid://b61q51y370hbi"]
+[gd_scene load_steps=2 format=3 uid="uid://b61q51y370hbi"]
+
+[ext_resource type="Texture2D" uid="uid://b1uxlqmolm7kf" path="res://assets/imgs/ui/AddButton.png" id="1_7am6p"]
 
 [node name="Main" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="UI" type="Control" parent="UI"]
+[node name="AccountingSystem" type="Control" parent="UI"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="AddButton" type="TextureButton" parent="UI/AccountingSystem"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("1_7am6p")
+texture_pressed = ExtResource("1_7am6p")
+texture_hover = ExtResource("1_7am6p")
+texture_disabled = ExtResource("1_7am6p")
+stretch_mode = 5
+
+[node name="RecordContainer" type="ScrollContainer" parent="UI/AccountingSystem"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="UI/AccountingSystem/RecordContainer"]
+layout_mode = 2
+alignment = 1
